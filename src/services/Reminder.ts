@@ -19,7 +19,7 @@ class ReminderService {
       body: JSON.stringify({title}),
     })
 
-    return response.body
+    return response.json()
   }
 
   async removeReminder (id: number){
