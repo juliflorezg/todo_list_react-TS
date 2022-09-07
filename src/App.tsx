@@ -15,9 +15,13 @@ function App() {
     loadReminders()
   }, [])
 
+  const removeReminder = (id: number) => {
+    setReminders(reminders.filter(item => item.id !== id))
+  }
+
   return (
     <div className="w-full min-h-screen px-12 py-20 bg-slate-900">
-      <ReminderList items={reminders} />
+      <ReminderList items={reminders} onRemoveReminder={removeReminder} />
     </div>
   )
 }
