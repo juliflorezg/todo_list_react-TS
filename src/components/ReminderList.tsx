@@ -7,9 +7,9 @@ interface ReminderListProps {
 
 export default function ReminderList({ items }: ReminderListProps) {
   return (
-    <ul className='text-white text-center'>
+    <ul className='max-w-2xl mx-auto text-white text-center'>
       {items.map(item => (
-        <li key={item.id}>{item.title}</li>
+        <li className='mb-7 border-b-2 border-teal-200' key={item.id}>{item.title}</li>
       ))}
     </ul>
   )
